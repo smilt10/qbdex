@@ -7,21 +7,47 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
             text-align: center;
             padding: 20px;
+            position: relative;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background: url('qbdex-logo-white.png') center/cover no-repeat;
         }
+        
+        /* Background blur effect */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            filter: blur(8px);
+            z-index: -1;
+        }
+
         h2 {
             color: #333;
         }
+
         form {
             background: white;
             padding: 20px;
             max-width: 400px;
-            margin: auto;
+            width: 100%;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            z-index: 2;
+            position: relative;
         }
+
         input, textarea {
             width: 100%;
             padding: 10px;
@@ -29,6 +55,7 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+
         button {
             background-color: #007BFF;
             color: white;
@@ -38,8 +65,18 @@
             cursor: pointer;
             width: 100%;
         }
+
         button:hover {
             background-color: #0056b3;
+        }
+
+        /* Avatar styling */
+        .avatar {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 300px; /* 3x larger */
+            height: auto;
         }
     </style>
 </head>
@@ -48,20 +85,23 @@
     <h2>Demandez Notre Service</h2>
     <p>Remplissez le formulaire ci-dessous et nous vous contacterons rapidement.</p>
 
-    <form action="https://formsubmit.co/votre@email.com" method="POST">
+    <form action="https://formsubmit.co/emysoh22@gmail.com" method="POST">
         <input type="text" name="name" placeholder="Votre Nom" required>
         <input type="email" name="email" placeholder="Votre Email" required>
         <input type="tel" name="phone" placeholder="Votre Numéro de Téléphone" required>
         <textarea name="message" rows="4" placeholder="Décrivez votre besoin..." required></textarea>
 
         <!-- Redirection après soumission -->
-        <input type="hidden" name="_next" value="https://votresite.com/merci.html">
+       <!-- <input type="hidden" name="_next" value="https://votresite.com/merci.html"> -->
         
         <!-- Sujet personnalisé de l'email -->
         <input type="hidden" name="_subject" value="Nouvelle Demande de Service depuis votre Site Web">
 
         <button type="submit">Envoyer la Demande</button>
     </form>
+
+    <!-- Avatar -->
+    <img src="avatar-transparent.png" alt="Avatar" class="avatar">
 
 </body>
 </html>
