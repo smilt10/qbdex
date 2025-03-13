@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Request Our Service</title>
+    <title>Demande de Service</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -45,15 +45,22 @@
 </head>
 <body>
 
-    <h2>Request Our Service</h2>
-    <p>Fill out the form below, and we will get back to you soon.</p>
+    <h2>Demandez Notre Service</h2>
+    <p>Remplissez le formulaire ci-dessous et nous vous contacterons rapidement.</p>
 
-    <form action="https://formsubmit.co/gowusu@tesseract-consulting.com" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <input type="tel" name="phone" placeholder="Your Phone Number" required>
-        <textarea name="message" rows="4" placeholder="Describe what you need..." required></textarea>
-        <button type="submit">Submit Request</button>
+    <form action="https://formsubmit.co/votre@email.com" method="POST">
+        <input type="text" name="name" placeholder="Votre Nom" required>
+        <input type="email" name="email" placeholder="Votre Email" required>
+        <input type="tel" name="phone" placeholder="Votre Numéro de Téléphone" required>
+        <textarea name="message" rows="4" placeholder="Décrivez votre besoin..." required></textarea>
+
+        <!-- Redirection après soumission -->
+        <input type="hidden" name="_next" value="https://votresite.com/merci.html">
+        
+        <!-- Sujet personnalisé de l'email -->
+        <input type="hidden" name="_subject" value="Nouvelle Demande de Service depuis votre Site Web">
+
+        <button type="submit">Envoyer la Demande</button>
     </form>
 
 </body>
