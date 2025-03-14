@@ -18,8 +18,9 @@
             align-items: center;
             overflow: hidden;
             background: url('qbdex-logo-white.png') center/cover no-repeat;
+            color: black;
         }
-        
+
         /* Background blur effect */
         body::before {
             content: "";
@@ -33,8 +34,12 @@
             z-index: -1;
         }
 
-        h2 {
-            color: #333;
+        /* Apply light grey background to h2 and p */
+        h2, p {
+            background-color: #f2f2f2; /* Light grey background */
+            padding: 15px;
+            border-radius: 5px;
+            color: black; /* Ensure the text is black */
         }
 
         form {
@@ -48,12 +53,14 @@
             position: relative;
         }
 
-        input, textarea {
+        input, textarea, select {
             width: 100%;
             padding: 10px;
             margin: 8px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
+            background: white;
+            color: black;
         }
 
         button {
@@ -82,6 +89,9 @@
 </head>
 <body>
 
+    <h2>QbDEX est la solution rendant accessible la démarche QbD aux équipes R&D expertes ou non initiées. La combinaison, de l’application et de l’accompagnement d’un expert QbD dédié, permet aux équipes de se mettre à la page du QbD de façon maitrisée et méthodique.</h2>
+    <p><strong>Nous allons bientôt lancer QbDEX ! Restez à l'écoute pour plus d'informations.</strong></p>
+
     <h2>Demandez Notre Service</h2>
     <p>Remplissez le formulaire ci-dessous et nous vous contacterons rapidement.</p>
 
@@ -89,7 +99,16 @@
         <input type="text" name="name" placeholder="Votre Nom" required>
         <input type="email" name="email" placeholder="Votre Email" required>
         <input type="tel" name="phone" placeholder="Votre Numéro de Téléphone" required>
-        <textarea name="message" rows="4" placeholder="Décrivez votre besoin..." required></textarea>
+        <input type="text" name="company" placeholder="Nom de l'Entreprise" required>
+        <input type="text" name="position" placeholder="Votre position." required>
+        <textarea name="message" rows="4" placeholder="Pourquoi êtes-vous intéressé par ce QbD ?..." required></textarea>
+
+        <label for="qbd">Utilisez-vous QBD dans votre entreprise ?</label>
+        <select name="qbd" id="qbd" required>
+            <option value="">Sélectionnez une option</option>
+            <option value="oui">Oui</option>
+            <option value="non">Non</option>
+        </select>
 
         <!-- Sujet personnalisé de l'email -->
         <input type="hidden" name="_subject" value="Nouvelle Demande de Service depuis votre Site Web">
@@ -102,3 +121,4 @@
 
 </body>
 </html>
+                                                                                                                           
