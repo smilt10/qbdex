@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mr QBDex Chat</title>
+  <style>
+    /* Reset default margin and padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Full-screen background */
+    body {
+      background-image: url('use.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Optional overlay (if you want to add a tint) */
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.1); /* Subtle overlay */
+      z-index: 1;
+    }
+
+    /* Chat widget container */
+    #chat-container {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Chat Widget Placeholder -->
+  <div id="chat-container"></div>
+
+
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<script type="module">
+	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+	createChat({
+		initialMessages: 'Hi there! 👋 My name is Mr QBDex. How can I assist you today?',
+		webhookUrl: 'https://gid.app.n8n.cloud/webhook/fa7c966e-4e0c-47e1-ab82-77262970cf22/chat',
+      		
+     		title: 'Mr QBDex Chat',
+                description: 'AI Assistant at your service!'
+	});
+</script>
+</body>
+</html>
