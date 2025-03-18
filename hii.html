@@ -21,7 +21,6 @@
             color: black;
         }
 
-        /* Background blur effect */
         body::before {
             content: "";
             position: absolute;
@@ -34,18 +33,17 @@
             z-index: -1;
         }
 
-        /* Apply light grey background to h2 and p */
         h2, p {
-            background-color: #f2f2f2; /* Light grey background */
+            background-color: #f2f2f2;
             padding: 15px;
             border-radius: 5px;
-            color: black; /* Ensure the text is black */
+            color: black;
         }
 
-        form {
+        .form-container {
             background: white;
             padding: 20px;
-            max-width: 400px;
+            max-width: 600px;
             width: 100%;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
@@ -53,72 +51,35 @@
             position: relative;
         }
 
-        input, textarea, select {
+        iframe {
             width: 100%;
-            padding: 10px;
-            margin: 8px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background: white;
-            color: black;
-        }
-
-        button {
-            background-color: #007BFF;
-            color: white;
-            padding: 10px;
+            height: 700px;
             border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
         }
 
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Avatar styling */
         .avatar {
             position: absolute;
             bottom: 10px;
             right: 10px;
-            width: 300px; /* 3x larger */
+            width: 300px;
             height: auto;
         }
     </style>
 </head>
 <body>
 
-    <h2>QbDEX est la solution rendant accessible la démarche QbD aux équipes R&D expertes ou non initiées. La combinaison, de l’application et de l’accompagnement d’un expert QbD dédié, permet aux équipes de se mettre à la page du QbD de façon maitrisée et méthodique.</h2>
+    <h2>QbDEX est la solution rendant accessible la démarche QbD aux équipes R&D expertes ou non initiées.</h2>
     <p><strong>Nous allons bientôt lancer QbDEX ! Restez à l'écoute pour plus d'informations.</strong></p>
 
     <h2>Demandez Notre Service</h2>
     <p>Remplissez le formulaire ci-dessous et nous vous contacterons rapidement.</p>
 
-    <form action="https://formsubmit.co/qbdex.assistant@qbd-ex.com" method="POST">
-        <input type="text" name="name" placeholder="Votre Nom" required>
-        <input type="email" name="email" placeholder="Votre Email" required>
-        <input type="tel" name="phone" placeholder="Votre Numéro de Téléphone" required>
-        <input type="text" name="company" placeholder="Nom de l'Entreprise" required>
-        <input type="text" name="position" placeholder="Votre position." required>
-        <textarea name="message" rows="4" placeholder="Pourquoi êtes-vous intéressé par ce QbD ?..." required></textarea>
+    <div class="form-container">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd95_0MWbHevpkUZClKZt93DsYua9QEqBnIj8BcZC-_Ryvrtg/viewform?embedded=true" width="400" height="400" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
 
-        <label for="qbd">Utilisez-vous QBD dans votre entreprise ?</label>
-        <select name="qbd" id="qbd" required>
-            <option value="">Sélectionnez une option</option>
-            <option value="oui">Oui</option>
-            <option value="non">Non</option>
-        </select>
+    </div>
 
-        <!-- Sujet personnalisé de l'email -->
-        <input type="hidden" name="_subject" value="Nouvelle Demande de Service depuis votre Site Web">
-
-        <button type="submit">Envoyer la Demande</button>
-    </form>
-
-    <!-- Avatar -->
     <img src="avatar-transparent.png" alt="Avatar" class="avatar">
 
 </body>
 </html>
-                                                                                                                           
